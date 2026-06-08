@@ -1,10 +1,46 @@
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #fff8f9;
+  --color-primary: #e91e63;
+  --color-primary-dark: #c2185b;
+  --color-pink-light: #f8bbd0;
+  --color-pink-pale: #fce4ec;
+  --color-text: #3d1f2b;
+  --color-text-muted: #9e6b7a;
+  --color-correct: #2e7d32;
+  --color-wrong: #c62828;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Lato', system-ui, sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(233, 30, 99, 0.1);
+}
+
+html, body, #root {
+  height: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #ffffff;
-  color: #1a1a1a;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-sans);
 }

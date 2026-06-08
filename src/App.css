@@ -1,4 +1,5 @@
-.App {
-  text-align: center;
-  padding: 2rem;
+/* App-level layout */
+.app {
+  width: 100%;
+  max-width: 680px;
 }

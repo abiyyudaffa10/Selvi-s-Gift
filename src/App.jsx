@@ -1,12 +1,7 @@
 import './App.css'
 
 function App() {
-  return (
-    <div className="App">
-      <h1>For Selvi Rebecca</h1>
-      <p>Coming soon...</p>
-    </div>
-  )
+  return <div className="app"><p>Loading...</p></div>
 }
 
 export default App
