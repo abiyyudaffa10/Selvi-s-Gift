@@ -11,14 +11,14 @@ export const chapters = [
         type: 'text',
         text: 'What was the first thing that happened to you on your very first day?',
         placeholder: 'Write whatever comes to mind...',
-        photo: '/selvi-web/photos/fober.jpg',
+        photo: '/photos/fober.jpg',
         photoCaption: 'Your first year ✨',
       },
       {
         type: 'text',
         text: 'Who was the first friend you made, and how did you meet?',
         placeholder: 'Tell the story...',
-        photo: '/selvi-web/photos/717993289_960799560116892_4919061328471501835_n.jpg',
+        photo: '/photos/717993289_960799560116892_4919061328471501835_n.jpg',
         photoCaption: 'The ones who made it worth it 🌸',
       },
       {
