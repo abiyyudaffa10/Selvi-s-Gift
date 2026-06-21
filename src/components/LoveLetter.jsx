@@ -26,18 +26,15 @@ export default function LoveLetter() {
         lineHeight: 1.9,
         color: 'var(--color-text)',
       }}>
-        <p style={{ marginBottom: '20px' }}>Hey sayang,</p>
         <p style={{ marginBottom: '20px' }}>
-          I hope you always do well in your life. I know mungkin sekarang kamu berada
-          di fase baru hidupmu — semua serba baru, serba cepat sekali berubah, serba
-          tidak yakin, dan lainnya. Aku gamau ngulang semua lecture ku setiap hari yang
-          aku kasih ke kamu, bekal tumbuh pun ga cuma dari aku saja.
-        </p>
-        <p style={{ marginBottom: '20px' }}>
-          Tapi aku ingin kamu tahu satu hal. Di setiap fase baru itu, kamu ga harus
-          selalu kuat sendirian. Kamu boleh bingung, boleh takut, boleh merasa ga siap,
-          boleh berhenti sebentar buat tarik nafas. Namanya juga idup — kalo ga cepet
-          berubah ya gada tantangan toh wkwk.
+          Hey sayang, I hope you always do well in your life. I know mungkin sekarang
+          kamu berada di fase baru hidupmu — semua serba baru, serba cepat sekali berubah,
+          serba tidak yakin, dan lainnya. Aku gamau ngulang semua lecture ku setiap hari
+          yang aku kasih ke kamu, bekal tumbuh pun ga cuma dari aku saja. Tapi aku ingin
+          kamu tahu satu hal. Di setiap fase baru itu, kamu ga harus selalu kuat sendirian.
+          Kamu boleh bingung, boleh takut, boleh merasa ga siap, boleh berhenti sebentar
+          buat tarik nafas. Namanya juga idup — kalo ga cepet berubah ya gada tantangan
+          toh wkwk.
         </p>
         <p style={{ marginBottom: '20px' }}>
           Kedepannya mungkin kalo aku ga ada di dekatmu, atau aku udah ga ada sama sekali
