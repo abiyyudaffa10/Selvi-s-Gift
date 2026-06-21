@@ -24,3 +24,8 @@ dist-ssr/
 *.njsproj
 *.sln
 *.sw?
+
+# Dev artifacts (not for the public gift repo)
+e2e-screenshots/
+e2e-test.js
+.superpowers/

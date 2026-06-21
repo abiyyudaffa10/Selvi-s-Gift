@@ -76,22 +76,20 @@ export default function PhotoSlideshow({ onNext }) {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          style={{ marginTop: '36px' }}
+          style={{ marginTop: '36px', textAlign: 'center' }}
         >
-          <button
-            onClick={onNext}
-            style={{
-              background: 'var(--color-primary)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '50px',
-              padding: '14px 36px',
-              fontSize: '1rem',
-              fontFamily: 'var(--font-sans)',
-            }}
-          >
-            Read your letter →
-          </button>
+          <p style={{
+            fontFamily: 'var(--font-serif)',
+            fontStyle: 'italic',
+            fontSize: '1.15rem',
+            color: 'var(--color-primary-dark)',
+            marginBottom: '8px',
+          }}>
+            Here's to us, and everything still to come.
+          </p>
+          <div style={{ fontSize: '1.4rem', letterSpacing: '6px', opacity: 0.5 }}>
+            🌸 ✦ 🌸
+          </div>
         </motion.div>
       )}
     </motion.div>

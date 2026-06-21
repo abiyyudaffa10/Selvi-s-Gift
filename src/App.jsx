@@ -7,7 +7,6 @@ import ChapterScene from './components/ChapterScene'
 import QuizQuestion from './components/QuizQuestion'
 import ScoreReveal from './components/ScoreReveal'
 import PhotoSlideshow from './components/PhotoSlideshow'
-import LoveLetter from './components/LoveLetter'
 import './App.css'
 
 export default function App() {
@@ -57,9 +56,6 @@ export default function App() {
         )}
         {screen === 'slideshow' && (
           <PhotoSlideshow key="slideshow" onNext={next} />
-        )}
-        {screen === 'letter' && (
-          <LoveLetter key="letter" />
         )}
       </AnimatePresence>
     </div>

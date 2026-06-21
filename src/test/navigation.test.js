@@ -23,15 +23,29 @@ describe('advance()', () => {
     expect(next.chapterIndex).toBe(0)
   })
 
-  it('moves from last question of a chapter to next chapter scene', () => {
+  it('moves from second question to third question in chapter 1 (which has 3 questions)', () => {
     const next = advance({ ...base, screen: 'quiz', chapterIndex: 0, questionIndex: 1 })
+    expect(next.screen).toBe('quiz')
+    expect(next.questionIndex).toBe(2)
+    expect(next.chapterIndex).toBe(0)
+  })
+
+  it('moves from last question of chapter 1 (index 2) to chapter 2 scene', () => {
+    const next = advance({ ...base, screen: 'quiz', chapterIndex: 0, questionIndex: 2 })
     expect(next.screen).toBe('chapter')
     expect(next.chapterIndex).toBe(1)
     expect(next.questionIndex).toBe(0)
   })
 
-  it('moves from last question of last chapter to score screen', () => {
-    const next = advance({ ...base, screen: 'quiz', chapterIndex: 3, questionIndex: 1 })
+  it('moves from last question of a middle chapter to next chapter', () => {
+    const next = advance({ ...base, screen: 'quiz', chapterIndex: 1, questionIndex: 1 })
+    expect(next.screen).toBe('chapter')
+    expect(next.chapterIndex).toBe(2)
+    expect(next.questionIndex).toBe(0)
+  })
+
+  it('moves from the single letter step of the last chapter (index 4) to score screen', () => {
+    const next = advance({ ...base, screen: 'quiz', chapterIndex: 4, questionIndex: 0 })
     expect(next.screen).toBe('score')
   })
 
@@ -40,13 +54,8 @@ describe('advance()', () => {
     expect(next.screen).toBe('slideshow')
   })
 
-  it('moves from slideshow to letter', () => {
-    const next = advance({ ...base, screen: 'slideshow' })
-    expect(next.screen).toBe('letter')
-  })
-
-  it('does not change state from letter screen', () => {
-    const state = { ...base, screen: 'letter' }
+  it('does not change state from slideshow screen (final screen)', () => {
+    const state = { ...base, screen: 'slideshow' }
     expect(advance(state)).toEqual(state)
   })
 })

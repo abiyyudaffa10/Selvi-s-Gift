@@ -44,3 +44,25 @@ button {
   cursor: pointer;
   font-family: var(--font-sans);
 }
+
+/* Print: show only the love letter (for "Save letter" → Save as PDF) */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #love-letter,
+  #love-letter * {
+    visibility: visible;
+  }
+  #love-letter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

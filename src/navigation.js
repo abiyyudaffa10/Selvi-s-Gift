@@ -1,5 +1,6 @@
-const TOTAL_CHAPTERS = 4
-const QUESTIONS_PER_CHAPTER = 2
+import { chapters } from './data/chapters'
+
+const TOTAL_CHAPTERS = 5
 
 export function advance(state) {
   const { screen, chapterIndex, questionIndex } = state
@@ -13,7 +14,8 @@ export function advance(state) {
   }
 
   if (screen === 'quiz') {
-    const isLastQuestion = questionIndex === QUESTIONS_PER_CHAPTER - 1
+    const totalQuestions = chapters[chapterIndex].questions.length
+    const isLastQuestion = questionIndex === totalQuestions - 1
     const isLastChapter = chapterIndex === TOTAL_CHAPTERS - 1
 
     if (!isLastQuestion) {
@@ -26,7 +28,6 @@ export function advance(state) {
   }
 
   if (screen === 'score') return { ...state, screen: 'slideshow' }
-  if (screen === 'slideshow') return { ...state, screen: 'letter' }
-
+  // slideshow is the final screen — the love letter is now Chapter 5
   return state
 }

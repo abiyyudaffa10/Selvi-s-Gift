@@ -16,20 +16,16 @@ describe('PhotoSlideshow', () => {
     expect(screen.getByText('First photo')).toBeInTheDocument()
   })
 
-  it('shows the Continue button after clicking through all photos', async () => {
+  it('advances to the next photo when clicked', async () => {
     render(<PhotoSlideshow onNext={() => {}} />)
     await userEvent.click(screen.getByRole('img'))
     expect(screen.getByText('Second photo')).toBeInTheDocument()
-    await userEvent.click(screen.getByRole('img'))
-    expect(screen.getByRole('button', { name: /letter/i })).toBeInTheDocument()
   })
 
-  it('calls onNext when Continue button is clicked', async () => {
-    const onNext = vi.fn()
-    render(<PhotoSlideshow onNext={onNext} />)
+  it('shows the closing message after clicking through all photos', async () => {
+    render(<PhotoSlideshow onNext={() => {}} />)
     await userEvent.click(screen.getByRole('img'))
     await userEvent.click(screen.getByRole('img'))
-    await userEvent.click(screen.getByRole('button', { name: /letter/i }))
-    expect(onNext).toHaveBeenCalledOnce()
+    expect(screen.getByText(/everything still to come/i)).toBeInTheDocument()
   })
 })
